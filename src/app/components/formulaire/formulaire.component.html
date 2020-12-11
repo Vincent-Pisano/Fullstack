@@ -1,0 +1,131 @@
+<section>
+    <h1 class="mt-4">Entrez vos données</h1>
+
+    <form [formGroup]="etudiantForm" (ngSubmit)="ajoutEtudiant()">
+        <div class="field name-box my-4">
+            <input type="text" id="firstName" formControlName="firstName" placeholder="PRENOM" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.firstName.valid)}"
+                 for="firstName">
+                <span>Prénom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.firstName.valid && (formSaveEtudiant.firstName.dirty ||formSaveEtudiant.firstName.touched)">
+            <div [hidden]="!formSaveEtudiant.firstName.errors.required" class="alert alert-danger py-2 mt-3">
+                Le prénom est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.firstName.errors.minlength" class="alert alert-danger py-2 mt-3">
+                Le prénom doit être d'au moins 4 charactères
+            </div>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="lastName" formControlName="lastName" placeholder="NOM" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.lastName.valid)}"
+                 for="lastName">
+                <span>Nom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.lastName.valid && (formSaveEtudiant.lastName.dirty ||formSaveEtudiant.lastName.touched)">
+            <div [hidden]="!formSaveEtudiant.lastName.errors.required" class="alert alert-danger py-2 mt-3">
+                Le nom est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.lastName.errors.minlength" class="alert alert-danger py-2 mt-3">
+                Le nom doit être d'au moins 4 charactères
+            </div>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="age" formControlName="age" placeholder="AGE" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.age.valid)}"
+                 for="age">
+                <span>Age</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.age.valid && (formSaveEtudiant.age.dirty ||formSaveEtudiant.age.touched)">
+            <div [hidden]="!formSaveEtudiant.age.errors.required" class="alert alert-danger py-2 mt-3">
+                L'age est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.age.errors.min" class="alert alert-danger py-2 mt-3">
+                L'age doit être supérieur à 0
+            </div>
+            <div [hidden]="!formSaveEtudiant.age.errors.max" class="alert alert-danger py-2 mt-3">
+                L'age doit être inférieur à 99
+            </div>
+            <div [hidden]="!formSaveEtudiant.age.errors.pattern" class="alert alert-danger py-2 mt-3">
+                L'age doit être un nombre
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="field email-box my-4">
+            <input type="text" id="email" formControlName="email" placeholder="EMAIL" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.email.valid)}"
+                 for="email">
+                <span>Email</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.email.valid && (formSaveEtudiant.email.dirty ||formSaveEtudiant.email.touched)">
+            <div [hidden]="!formSaveEtudiant.email.errors.required" class="alert alert-danger py-2 mt-3">
+                L'email est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.email.errors.pattern" class="alert alert-danger py-2 mt-3">
+                L'émail doit respecter le pattern : exemple@courriel.com
+            </div>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="location" formControlName="location" placeholder="LOCATION" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.location.valid)}"
+                 for="location">
+                <span>location</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.location.valid && (formSaveEtudiant.location.dirty ||formSaveEtudiant.location.touched)">
+            <div [hidden]="!formSaveEtudiant.location.errors.required" class="alert alert-danger py-2 mt-3">
+                La location est obligatoire
+            </div>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="sujet" formControlName="sujet" placeholder="SUJET" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.sujet.valid)}"
+                 for="sujet">
+                <span>sujet</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.sujet.valid && (formSaveEtudiant.sujet.dirty ||formSaveEtudiant.sujet.touched)">
+            <div [hidden]="!formSaveEtudiant.sujet.errors.required" class="alert alert-danger py-2 mt-3">
+                Le sujet est obligatoire
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="field msg-box my-4">
+            <textarea id="message" rows="4" formControlName="message" placeholder="MESSAGE"></textarea>
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.message.dirty)}"
+                 for="message">
+                <span>message</span>
+            </label>
+            <span></span>
+        </div>
+
+        <input class="button" type="submit" value="Envoyer" />
+        <div *ngIf="validMessage != ''" class="text-danger text-center">
+            <h3 class="alert alert-danger py-2 mt-3 display-4">{{validMessage}}</h3>
+        </div>
+    </form>
+</section>

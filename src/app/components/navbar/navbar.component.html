@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mx-background-top-linear">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white mr-auto ml-4" href="https://github.com/zaratechs/420-345-G001-A20/wiki/Réflexion-Travail-Final">
+            Portfolio
+        </a>  
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" 
+                aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact:true}">
+              <a [routerLink]="['/home']" 
+              class="nav-link text-capitalize px-3" >home</a>
+            </li>
+            <li class="nav-item dropdown" [routerLinkActive]="['link-active']">
+              <a class="nav-link dropdown-toggle text-capitalize px-3" id="tutorial" 
+              role="button" data-toggle="dropdown">
+                tutorial
+              </a>
+              <div class="dropdown-menu" aria-labelledby="tutorial">
+                <a [routerLink]="['/tutoriel', 1]"  [routerLinkActive]="['dropdown-active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item text-capitalize">Mini tutoriel Angular 10</a>
+                <a [routerLink]="['/tutoriel', 2]"  [routerLinkActive]="['dropdown-active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item text-capitalize">Mini tutoriel Crud</a>
+                <a [routerLink]="['/tutoriel', 3]"  [routerLinkActive]="['dropdown-active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown-item text-capitalize">Mini tutoriel des relations</a>
+              </div>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact:true}">
+              <a [routerLink]="['/formulaire']" 
+              class="nav-link  text-capitalize px-3" >Formulaire</a>
+            </li>
+            <li class="nav-item"  [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact:true}">
+              <a [routerLink]="['/crud']"
+              class="nav-link  text-capitalize px-3" >Crud</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact:true}">
+              <a [routerLink]="['/fun']" 
+              class="nav-link  text-capitalize px-3" >Fun</a>
+            </li>
+            <li class="nav-item"  [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{exact:true}">
+              <a [routerLink]="['/contact']"
+              class="nav-link text-capitalize px-3" >Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>

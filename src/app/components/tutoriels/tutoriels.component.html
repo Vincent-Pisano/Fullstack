@@ -1,0 +1,271 @@
+<section>
+    <ng-container [ngSwitch]="tutorielLinkId">
+        <!-- Début Mini Tutoriel Angular -->
+        <ng-container *ngSwitchCase="1">
+            <h1 class="text-center">Mini tutoriel Angular</h1>
+            <div class="tutoriel">
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-4 mb-3 text-center">
+                        <img [src]="['../../../assets/img/Angular_Logo.png']" alt="Angular">
+                    </div>
+                    <div class="col-sm-8 px-5 mb-3 text-center">
+                        <p> 
+                            Angular est un framework utilisant le TypeScript. 
+                        </p>
+                        <p>
+                            Il est basé sur les modules/composants.
+                        </p>
+                        <p>
+                            Ils permettent la création de SPA ou Single page Application 
+                            en chargeant la page par section et plus toute entière.
+                        </p>
+                        <p>
+                            Le chargement de la page se fait sur le navigateur Web et plus sur le serveur comme les applications.
+                            traditionnelle
+                        </p>
+                        <p>  
+                            Cela libère le serveur pour répondre plus rapidement aux demandes du client.
+                        </p>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-12 col-lg-6 mb-5">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-exclamation-circle fa-3x text-danger"></i>
+                                    <div class="text-right">
+                                        <h3 class="card-title">Différences </h3>
+                                        <h5 class="card-subtitle text-muted">TypeScript et Javascript</h5>
+                                    </div>
+                                </div>
+                                <hr class="separateur-little">
+                                <div>
+                                    <ol>
+                                        <li>TypeScript doit être compilé</li>
+                                        <li>TypeScript englobe Javascript</li>
+                                        <li>TypeScript utilise des types et des interfaces</li>
+                                        <li>TypeScript à une meilleur structure de code</li>
+                                        <li>Type script offre plus de controle</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a class="btn py-0" href="https://angular.io" target="_blank">
+                                    <span>Apprenez-en plus !</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 mb-5 text-center">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-graduation-cap fa-3x text-info"></i>
+                                    <div class="text-right">
+                                        <h3 class="card-title">Vocabulaire</h3>
+                                        <h5 class="card-subtitle text-muted">Important</h5>
+                                    </div>
+                                </div>
+                                <hr class="separateur-little">
+                                <div>
+                                    <ol>
+                                        <li>Selector: identifiant unique d'un composant</li>
+                                        <li>angular.json: configuration de l'application</li>
+                                        <li>package.json: les "packages" de l'apllication</li>
+                                        <li>interpolations : <span [innerHTML]="'\{\{...\}\}'"></span></li>
+                                        <li>Banane en boite : [(ngModel)]=”model”</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a class="btn py-0" href="https://angular.io" target="_blank">
+                                    <span>Apprenez-en plus !</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-md-center">
+                    <div class="col mb-5">
+                        <a [routerLink]="['/tutoriel', 2]">
+                            <input class="button" type="button" value="Suivant" />
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </ng-container>
+        <!-- Fin Mini Tutoriel Angular -->
+
+        <!-- Début Mini Tutoriel CRUD -->    
+         <ng-container *ngSwitchCase="2">
+            <h1 class="text-center">Mini tutoriel CRUD</h1>
+            <div class="tutoriel">
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-4 mb-3 text-center">
+                        <img [src]="['../../../assets/img/CRUD.png']" alt="Angular">
+                    </div>
+                    <div class="col-sm-8 px-5 mb-3 text-center">
+                        <p> 
+                            Les CRUD sont les opérations que font les API ou Application Programming Interface.
+                        </p>
+                        <p> 
+                            Les API les plus utilisées sont les REST API ou Representational State Transfert API.
+                        </p>
+                        <p>
+                            Les REST API sont responsables des services ou conversation entre le client et la base de données.
+                        </p>
+                        <p>
+                            En programmation Web, le format le plus utilisé dans cette conversation est le JSON.
+                        </p>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-12 col-lg-6 mb-5">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-exchange-alt fa-3x text-danger"></i>
+                                    <div class="text-right">
+                                        <h3 class="card-title">Angular</h3>
+                                        <h5 class="card-subtitle text-muted">service</h5>
+                                    </div>
+                                </div>
+                                <hr class="separateur-little">
+                                <p>Le module HttpClientModule sert de CRUD dans un projet Angular</p>
+                                <div>
+                                    <ul>
+                                        <li>Utilisation de l'interface GenericCrud.ts</li>
+                                    </ul>
+                                </div>    
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a class="btn py-0" href="https://angular.io/api/common/http/HttpClientModule" target="_blank">
+                                    <span>Apprenez-en plus !</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 mb-5 text-center">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-graduation-cap fa-3x text-info"></i>
+                                    <div class="text-right">
+                                        <h3 class="card-title">CRUD</h3>
+                                        <h5 class="card-subtitle text-muted">Signification</h5>
+                                    </div>
+                                </div>
+                                <hr class="separateur-little">
+                                <div>
+                                    <ol>
+                                        <li>C : CREATE = post</li>
+                                        <li>R : READ = get</li>
+                                        <li>U : UPDATE = put</li>
+                                        <li>D : DELETE = delete</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a class="btn py-0" href="https://www.codecademy.com/articles/what-is-crud" target="_blank">
+                                    <span>Apprenez-en plus !</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-12 col-lg-3 mb-5">
+                        <a [routerLink]="['/tutoriel', 1]">
+                            <input class="button" type="button" value="Retour" />
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 mb-5">
+                        <a [routerLink]="['/tutoriel', 3]">
+                            <input class="button" type="button" value="Suivant" />
+                        </a>
+                    </div> 
+                </div>
+                
+            </div>
+        </ng-container>
+        <!-- Fin Mini Tutoriel CRUD -->
+
+        <!-- Début Mini Tutoriel Relations --> 
+        <ng-container *ngSwitchCase="3">
+            <h1 class="text-center">Mini tutoriel Relations Objets</h1>
+            <div class="tutoriel">
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-4 mb-3 text-center">
+                        <img [src]="['../../../assets/img/Relations.png']" alt="Angular">
+                    </div>
+                    <div class="col-sm-8 px-5 mb-3 text-center">
+                        <p>
+                            La programmation orienté objet nécessite des relations entre les classes qui la composent.
+                        </p>
+                        <p>
+                            Elles définissent comment les classes intéragissent entre elles.
+                        </p>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col mb-5 text-center">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-graduation-cap fa-3x text-info"></i>
+                                    <div class="text-right">
+                                        <h3 class="card-title">Relations Objets</h3>
+                                        <h5 class="card-subtitle text-muted">Nom et définition</h5>
+                                    </div>
+                                </div>
+                                <hr class="separateur-little">
+                                <div>
+                                    <ol>
+                                        <li>Association: relation sémantique entre deux classes</li>
+                                        <li>Multiplicité: relation One To Many / Many To Many</li>
+                                        <li>Aggrégation: relation de contenance faible (Association de type "contient")</li>
+                                        <li>Composition: aggrégation plus forte (perte d'intégrité de l'objet sans cette relation)</li>
+                                        <li>Réalisation: relation entre une interface et une classe pour garantir la présence de certaine méthodes</li>
+                                        <li>Héritage: relation parent-enfant (l'enfant obtient les variables et méthodes (public/protected) du parents</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a class="btn py-0" href="https://hdd34.developpez.com/cours/artpoo/" target="_blank">
+                                    <span>Apprenez-en plus !</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="separateur">
+                <div class="row justify-content-md-center">
+                    <div class="col mb-5">
+                        <a [routerLink]="['/tutoriel', 2]">
+                            <input class="button" type="button" value="Retour" />
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </ng-container>
+        <!-- Fin Mini Tutoriel Relations -->
+
+        <ng-container *ngSwitchDefault>
+            <div class="tutoriel">
+                <h1 class="text-center">Oups ! ce Tutoriel n'existe pas encore</h1>
+                <a [routerLink]="[ '/home']">
+                    <input class="button" type="button" value="Retour Au Menu" />
+                </a>
+            </div>
+        </ng-container>
+    </ng-container>
+</section>

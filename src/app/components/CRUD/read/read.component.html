@@ -1,0 +1,76 @@
+<section>
+    <h1 class="mt-4">Entrez vos informations</h1>
+
+    <form [formGroup]="readEtudiantForm">
+        <div class="field name-box my-4">
+            <input type="text" id="firstName" formControlName="firstName" placeholder="PRENOM" [(ngModel)]="etudiant.firstName" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.firstName.valid)}"
+                 for="firstName">
+                <span>Prénom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="lastName" formControlName="lastName" placeholder="NOM" [(ngModel)]="etudiant.lastName" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.lastName.valid)}"
+                 for="lastName">
+                <span>Nom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="age" formControlName="age" placeholder="AGE" [(ngModel)]="etudiant.age" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.age.valid)}"
+                 for="age">
+                <span>Age</span>
+            </label>
+            <span></span>
+        </div>
+
+        <hr>
+
+        <div class="field email-box my-4">
+            <input type="text" id="email" formControlName="email" placeholder="EMAIL" [(ngModel)]="etudiant.email" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.email.valid)}"
+                 for="email">
+                <span>Email</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="location" formControlName="location" placeholder="LOCATION" [(ngModel)]="etudiant.location" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.location.valid)}"
+                 for="location">
+                <span>location</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="sujet" formControlName="sujet" placeholder="SUJET" [(ngModel)]="etudiant.sujet" readonly/>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.sujet.valid)}"
+                 for="sujet">
+                <span>sujet</span>
+            </label>
+            <span></span>
+        </div>
+
+        <hr>
+
+        <div class="field msg-box my-4">
+            <textarea id="message" rows="4" formControlName="message" placeholder="MESSAGE" [(ngModel)]="etudiant.message" readonly></textarea>
+            <label [ngClass]="{'isOpen': (formReadEtudiant.message.dirty || this.etudiant.message != null)}"
+                 for="message">
+                <span>message</span>
+            </label>
+            <span></span>
+        </div>
+        
+        <a [routerLink]="[ '/crud']">
+            <input class="button" type="submit" value="Retour" />
+        </a>
+    </form>
+</section>

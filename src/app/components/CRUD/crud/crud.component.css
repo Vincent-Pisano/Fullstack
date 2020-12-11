@@ -1,0 +1,59 @@
+section {
+    background: white;
+    margin: 60px auto 80px;
+    border-top: 15px solid #313a3d;
+    text-align: center;
+    
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+section h1 {
+    color: #313a3d;
+    margin-bottom: 40px;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+section table td {
+    font-size: 1.2em;
+}
+
+section input[type="button"] {
+    background: #fd9638;
+    color: #dddddd;
+    -webkit-appearance: none;
+    border: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+section input[type="button"]:hover {
+    color: white;
+}
+section input[type="button"]:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+    section h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+section h1 {
+    font-size: 2em;
+}
+}

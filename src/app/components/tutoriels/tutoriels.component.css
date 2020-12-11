@@ -1,0 +1,138 @@
+section {
+    background: white;
+    margin: 60px auto 80px;
+    border-top: 15px solid #313a3d;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 50px;
+    max-width: 1100px;
+    color: #313a3d;
+    
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+section h1 {
+    margin: 25px auto;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+section p
+{
+    text-align: justify;
+    font-size: 150%;
+}
+
+section .separateur {
+    border: 5px solid #313a3d;
+    background-color: #313a3d;
+    margin-bottom: 5%;
+}
+
+.card .separateur-little
+{
+    border: 1px solid #b6b6b6;
+    background-color: #b6b6b6;
+    width: 80%;
+}
+
+.card li
+{
+    font-size: 125%;
+    text-align: left;
+}
+
+section .tutoriel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer
+{
+    background: #fd9638;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+
+.card-footer span
+{
+    color: white;
+
+    text-transform: uppercase;
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.45em;
+    letter-spacing: 0.075em;
+
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+
+.card-footer span:hover
+{
+    color: #fd9638;
+}
+
+.card-footer .btn:focus {
+    outline: none;
+}
+
+.card-footer:hover
+{
+    background: #313a3d;
+}
+
+input[type="button"] {
+    background: #fd9638;
+    color: white;
+    -webkit-appearance: none;
+    border: none;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 13px 50px;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+}
+input[type="button"]:hover {
+    background: #313a3d;
+    color: #fd9638;
+}
+input[type="button"]:focus {
+    outline: none;
+    background: #cd6302;
+}
+
+@media only screen and (max-width: 1200px)
+{
+    section h1 {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    section h1 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,75 @@
+<!--Etape 1
+    Bouton AJOUTER
+    TABLEAU Bootstrap
+        DANS LE TABLEAU :
+        colonnes des attributs
+        colonne avec les boutons et les méthodes associer 
+        (lors de la création on dit que chaque méthode prend le id en paramètre
+            ==> exemple : delete({{this.objet.index}}))
+            lire    
+            supprimer
+            modifier
+    -->
+
+<div class="container">
+  <section>
+    <h1 class="my-4">Liste des étudiants</h1>
+    <div class="container-fluid p-4">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th *ngFor="let entete of headElements" scope="col">{{ entete }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let etudiant of listEtudiants; let i = index">
+              <td class="align-middle" scope="row">{{ etudiant.id}}</td>
+              <td class="align-middle">{{ etudiant.firstName}}</td>
+              <td class="align-middle">{{ etudiant.lastName }}</td>
+              <td class="align-middle">{{ etudiant.age }}</td>
+              <td class="align-middle">{{ etudiant.email }}</td>
+              <td class="align-middle">
+                <a [routerLink]="['/afficheEtudiant/', etudiant.id]">
+                  <input class="button bg-info" type="button" value="Afficher" />
+                </a>
+              </td>
+              <td class="align-middle">
+                <a [routerLink]="['/updateFormulaire/', etudiant.id]">
+                  <input class="button bg-primary" type="button" value="Mettre à jour" />
+                </a>
+              </td>
+              <td class="align-middle">
+                <a data-toggle="modal" data-target="#confirmationSuppression" (click)="saveId(etudiant.id, i)">
+                  <input class="button bg-danger" type="button" value="Supprimer" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="modal fade" id="confirmationSuppression" tabindex="-1" role="dialog"
+          aria-labelledby="confirmationSuppressionTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content bg-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="confirmationSuppressionTitle">Confirmer la suppression</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Voulez vous vraiment supprimer l'étudiant : {{this.idToDelete}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" (click)="deleteEtudiant()" data-dismiss="modal"
+                  class="btn btn-danger mx-2">Supprimer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

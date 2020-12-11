@@ -1,0 +1,85 @@
+<section>
+    <h1 class="mt-4">Informations personnelles</h1>
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-8 col-md-10 px-5 pb-5">
+            <div class="card card-common">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <i class="fas fa-address-card fa-3x text-dark"></i>
+                        <div class="text-right text-secondary">
+                            <h5>Renaud Vincent</h5>
+                            <h3>CV</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a class="btn py-0" href="../../../assets/CV/CV_Renaud_Vincent_A2020.pdf" target="_blank">
+                        <span>Jetez-y un coup d'oeil</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section>
+    <h1 class="mt-4">Contactez moi</h1>
+
+    <form [formGroup]="etudiantForm" (ngSubmit)="mailMe()">
+        <div class="field name-box my-4">
+            <input type="text" id="firstName" formControlName="firstName" placeholder="PRENOM" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.firstName.valid)}"
+                 for="firstName">
+                <span>Prénom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.firstName.valid && (formSaveEtudiant.firstName.dirty ||formSaveEtudiant.firstName.touched)">
+            <div [hidden]="!formSaveEtudiant.firstName.errors.required" class="alert alert-danger py-2 mt-3">
+                Le prénom est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.firstName.errors.minlength" class="alert alert-danger py-2 mt-3">
+                Le prénom doit être d'au moins 4 charactères
+            </div>
+        </div>
+
+        <div class="field name-box my-4">
+            <input type="text" id="lastName" formControlName="lastName" placeholder="NOM" />
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.lastName.valid)}"
+                 for="lastName">
+                <span>Nom</span>
+            </label>
+            <span></span>
+        </div>
+
+        <div *ngIf="!formSaveEtudiant.lastName.valid && (formSaveEtudiant.lastName.dirty ||formSaveEtudiant.lastName.touched)">
+            <div [hidden]="!formSaveEtudiant.lastName.errors.required" class="alert alert-danger py-2 mt-3">
+                Le nom est obligatoire
+            </div>
+            <div [hidden]="!formSaveEtudiant.lastName.errors.minlength" class="alert alert-danger py-2 mt-3">
+                Le nom doit être d'au moins 4 charactères
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="field msg-box my-4">
+            <textarea id="message" rows="4" formControlName="message" placeholder="MESSAGE"></textarea>
+            <label [ngClass]="{'isOpen': (formSaveEtudiant.message.dirty)}"
+                 for="message">
+                <span>message</span>
+            </label>
+            <span></span>
+        </div>
+
+        <input class="button" type="submit" value="Envoyer" />
+        
+        <!-- revoir espacement bottom -->
+        <div *ngIf="validMessage != ''" class="text-danger text-center">
+            <h3 class="alert alert-danger py-2 mt-3 display-4">{{validMessage}}</h3>
+        </div>
+    </form>
+</section>
