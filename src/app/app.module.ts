@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReadComponent } from './components/CRUD/read/read.component';
 import { UpdateComponent } from './components/CRUD/update/update.component';
 import { CrudComponent } from './components/CRUD/crud/crud.component';
+import { FunPipe } from './components/fun/fun.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CrudComponent } from './components/CRUD/crud/crud.component';
     Error404Component,
     ReadComponent,
     UpdateComponent,
-    CrudComponent
+    CrudComponent,
+    FunPipe
   ],
   imports: [
     BrowserModule,

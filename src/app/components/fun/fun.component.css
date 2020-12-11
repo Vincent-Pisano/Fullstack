@@ -8,8 +8,8 @@ section {
     
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    color: #b6b6b6;
 }
+
 section h1 {
     color: #313a3d;
     margin-bottom: 40px;
@@ -17,4 +17,15 @@ section h1 {
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
+}
+
+section .separateur {
+    border: 5px solid #313a3d;
+    background-color: #313a3d;
+    margin-bottom: 5%;
+}
+
+select
+{
+    width: 30%;
 }

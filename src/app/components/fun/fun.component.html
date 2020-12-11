@@ -1,3 +1,60 @@
-<section class="py-5">
-    <h1 class="my-4">Bientôt disponible !</h1>
+<section class="bg-light p-5">
+    <div class="row pb-4">
+        <div class="col">
+            <div class="form-group">
+                <h1 class="">Prenez une pause</h1>
+                <select class="form-control text-dark font-weight-bold" id="exampleFormControlSelect"
+                (change)="onChange($event)">
+                    <option value="1">2020</option>
+                    <option value="2">2019</option>
+                    <option value="3">2018</option>
+                </select>
+            </div>
+            <table class="table table-hover table-striped table-bordered table-responsive-md">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-white" style="text-align:center;">Video</th>
+                        <th class="text-white" style="text-align:center;">Range</th>
+                        <th class="text-white" style="text-align:center;">Artist</th>
+                        <th class="text-white" style="cursor: pointer;text-align:center;">Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let video of videos" class="table-{{ video.url }}" (click)="select(video)">
+                        <td class="align-middle text-secondary" style="cursor: pointer;text-align:center"><i
+                                class="fab fa-youtube text-danger fa-2x"></i></td>
+                        <td class="align-middle" style="cursor: pointer;text-align:center">{{ video.classement }}</td>
+                        <td class="align-middle" style="cursor: pointer;text-align:center">{{ video.author }}</td>
+                        <td class="align-middle" style="cursor: pointer;text-align:center">{{ video.title }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr class="separateur">
+    <div class="row">
+        <div class="col">
+            <div class="text-center col">
+                <h1 class="h4">Appréciez la musique</h1>
+            </div>
+            <div class="card bg-light mb-3 text-center">
+                <div class="card-body" *ngIf="videoSelected">
+                    <h5 class="card-title">{{ videoSelected.author }}</h5>
+                    <h6 class="card-title text-secondary">{{ videoSelected.title }}</h6>
+                    <h6 class="card-title text-info">{{ videoSelected.classement }}</h6>
+                </div>
+                <div class="card-body" *ngIf="!videoSelected">
+                    <div class="alert alert-danger" role="alert">
+                        Choisissez une musique dans la liste pour l'écouter<br>
+                        <i class="fab fa-youtube fa-2x text-danger"></i>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="videoSelected" class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" [src]="('https://www.youtube.com/embed/' + videoSelected.url) | youtube" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
 </section>
