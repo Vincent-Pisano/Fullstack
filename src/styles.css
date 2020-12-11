@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body, html {
-    background-image: url('assets/img/background.jpg');
+    background-image: url('assets/images/background.jpg');
     height: 100%; 
 
     /* Center and scale the image nicely */
