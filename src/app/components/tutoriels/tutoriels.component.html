@@ -6,10 +6,10 @@
             <div class="tutoriel">
                 <hr class="separateur">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-sm-4 mb-3 text-center">
+                    <div class="col-md-4 mb-3 text-center">
                         <img [src]="['assets/images/Angular_Logo.png']" alt="Angular">
                     </div>
-                    <div class="col-sm-8 px-5 mb-3 text-center">
+                    <div class="col-md-8 px-5 mb-3 text-center">
                         <p> 
                             Angular est un framework utilisant le TypeScript. 
                         </p>
@@ -88,6 +88,58 @@
                         </div>
                     </div>
                 </div>
+                <hr class="separateur mb-0">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col mb-3">
+                        <h1>Commandes courantes</h1>
+                        <div class="container-fluid">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>But de la commande</th>
+                                            <th>Commande</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Créer un nouveau projet FULL</td>
+                                            <td>ng n [nom_projet] --routing</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Générer un composant</td>
+                                            <td>ng generate component components/[nom_composant]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Générer un service</td>
+                                            <td>ng generate service services/[nom_service]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Générer une classe</td>
+                                            <td>ng generate class models/[nom_classe]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lancer le projet</td>
+                                            <td>npm start</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Faire les tests unitaires</td>
+                                            <td>ng test OU npm test</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Faire les tests pour le clean code</td>
+                                            <td>ng lint</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Faire les tests unitaires et clean code</td>
+                                            <td>ng e2e</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>       
+                    </div>
+                </div>
                 <hr class="separateur">
                 <div class="row justify-content-md-center">
                     <div class="col mb-5">
@@ -106,10 +158,10 @@
             <div class="tutoriel">
                 <hr class="separateur">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-sm-4 mb-3 text-center">
+                    <div class="col-lg-4 mb-3 text-center">
                         <img [src]="['assets/images/CRUD.png']" alt="Angular">
                     </div>
-                    <div class="col-sm-8 px-5 mb-3 text-center">
+                    <div class="col-lg-8 px-5 mb-3 text-center">
                         <p> 
                             Les CRUD sont les opérations que font les API ou Application Programming Interface.
                         </p>
@@ -180,13 +232,13 @@
                     </div>
                 </div>
                 <hr class="separateur">
-                <div class="row justify-content-md-center">
-                    <div class="col-sm-12 col-lg-3 mb-5">
+                <div class="row justify-content-md-center mb-5">
+                    <div class="col-sm-12 col-lg-4 col-xl-3">
                         <a [routerLink]="['/tutoriel', 1]">
                             <input class="button" type="button" value="Retour" />
                         </a>
                     </div>
-                    <div class="col-sm-12 col-lg-3 mb-5">
+                    <div class="col-sm-12 col-lg-4 col-xl-3 mb-5">
                         <a [routerLink]="['/tutoriel', 3]">
                             <input class="button" type="button" value="Suivant" />
                         </a>

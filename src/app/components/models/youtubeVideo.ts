@@ -5,5 +5,5 @@ export class YoutubeVideo
     url: string;
     title: string;
     author: string;
-    annee: string;
+    classement: string;
 }
