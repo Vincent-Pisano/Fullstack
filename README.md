@@ -1,6 +1,10 @@
 # FullStack
 
-#### Ce projet est le projet final du cours de **Programmation Web Avancé 420-335-AL**
+### Ce projet est le projet final du cours de **Programmation Web Avancé 420-335-AL**
+
+##### pour avoir le composant CRUD fonctionnel, utilisez :
+##### json-server -w ./[chemin]/fichier.json --port 3850 
+##### avec un tableau json portant le nom 'tp'
 
 ___
 
