@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
         this.router.navigateByUrl('/home');
     }
     else {
-      this.validMessage="Please fill out the form before submitting!"
+      this.validMessage="Remplissez le formulaire avant de l'envoyer !"
     }
   }
 

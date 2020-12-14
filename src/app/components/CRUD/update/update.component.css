@@ -171,4 +171,14 @@ form input[type="button"]:focus {
     section h1 {
         font-size: 2em;
     }
+
+    form input[type="submit"]
+    {
+        padding: 7% 10%;
+    }
+
+    .alert
+    {
+        font-size: 200%;
+    }
 }

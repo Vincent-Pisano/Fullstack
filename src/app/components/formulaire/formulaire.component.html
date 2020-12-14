@@ -6,7 +6,7 @@
             <input type="text" id="firstName" formControlName="firstName" placeholder="PRENOM" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.firstName.valid)}"
                  for="firstName">
-                <span>Prénom</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.firstName.dirty && formSaveEtudiant.firstName.valid}">Prénom</span>
             </label>
             <span></span>
         </div>
@@ -24,7 +24,7 @@
             <input type="text" id="lastName" formControlName="lastName" placeholder="NOM" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.lastName.valid)}"
                  for="lastName">
-                <span>Nom</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.lastName.dirty && formSaveEtudiant.lastName.valid}">Nom</span>
             </label>
             <span></span>
         </div>
@@ -42,7 +42,7 @@
             <input type="text" id="age" formControlName="age" placeholder="AGE" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.age.valid)}"
                  for="age">
-                <span>Age</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.age.dirty && formSaveEtudiant.age.valid}">Age</span>
             </label>
             <span></span>
         </div>
@@ -68,7 +68,7 @@
             <input type="text" id="email" formControlName="email" placeholder="EMAIL" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.email.valid)}"
                  for="email">
-                <span>Email</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.email.dirty && formSaveEtudiant.email.valid}">Email</span>
             </label>
             <span></span>
         </div>
@@ -86,7 +86,7 @@
             <input type="text" id="location" formControlName="location" placeholder="LOCATION" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.location.valid)}"
                  for="location">
-                <span>location</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.location.dirty && formSaveEtudiant.location.valid}">location</span>
             </label>
             <span></span>
         </div>
@@ -101,7 +101,7 @@
             <input type="text" id="sujet" formControlName="sujet" placeholder="SUJET" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.sujet.valid)}"
                  for="sujet">
-                <span>sujet</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.sujet.dirty && formSaveEtudiant.sujet.valid}">sujet</span>
             </label>
             <span></span>
         </div>
@@ -118,7 +118,7 @@
             <textarea id="message" rows="4" formControlName="message" placeholder="MESSAGE"></textarea>
             <label [ngClass]="{'isOpen': (formSaveEtudiant.message.dirty)}"
                  for="message">
-                <span>message</span>
+                <span [ngClass]="{'invisible': formSaveEtudiant.message.dirty && formSaveEtudiant.message.valid}">message</span>
             </label>
             <span></span>
         </div>
@@ -126,6 +126,7 @@
         <input class="button" type="submit" value="Envoyer" />
         <div *ngIf="validMessage != ''" class="text-danger text-center">
             <h3 class="alert alert-danger py-2 mt-3 display-4">{{validMessage}}</h3>
+            <div class="py-2"></div>
         </div>
     </form>
 </section>

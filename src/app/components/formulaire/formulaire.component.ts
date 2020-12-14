@@ -44,7 +44,7 @@ export class FormulaireComponent implements OnInit {
       })
     }
     else {
-      this.validMessage="Please fill out the form before submitting!"
+      this.validMessage="Remplissez le formulaire avant de l'envoyer !"
     }
   }
 }
