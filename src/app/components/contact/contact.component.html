@@ -29,7 +29,7 @@
 <section>
     <h1 class="mt-4">Contactez moi</h1>
 
-    <form [formGroup]="etudiantForm" (ngSubmit)="mailMe()">
+    <form [formGroup]="contactForm" (ngSubmit)="mailMe()">
         <div class="field name-box my-4">
             <input type="text" id="firstName" formControlName="firstName" placeholder="PRENOM" />
             <label [ngClass]="{'isOpen': (formSaveEtudiant.firstName.valid)}"
@@ -79,7 +79,6 @@
 
         <input class="button" type="submit" value="Envoyer" />
         
-        <!-- revoir espacement bottom -->
         <div *ngIf="validMessage != ''" class="text-danger text-center">
             <h3 class="alert alert-danger py-2 mt-3 display-4">{{validMessage}}</h3>
             <div class="py-2"></div>

@@ -10,7 +10,7 @@ import { ReactiveFormulaireService } from '../services/reactive-formulaire.servi
 })
 export class ContactComponent implements OnInit {
 
-  etudiantForm : FormGroup = new FormGroup({
+  contactForm : FormGroup = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.minLength(4)]),
     lastName: new FormControl('', [Validators.required, Validators.minLength(4)]),
     message: new FormControl('')
@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
   emailSendTo: string = "contact.renaudvincent@gmail.com"
   emailLink:string = "";
 
-  constructor(private service: ReactiveFormulaireService, private router:Router) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void 
   {
@@ -29,21 +29,21 @@ export class ContactComponent implements OnInit {
 
   get formSaveEtudiant()
   {
-    return this.etudiantForm.controls;
+    return this.contactForm.controls;
   }
 
   mailMe()
   {
     
-    if(this.etudiantForm.valid)
+    if(this.contactForm.valid)
     {
-        this.emailLink = ("mailto:" + (this.emailSendTo) + "?subject=" + "Retour de "+ 
-                          this.etudiantForm.controls["firstName"].value + " " + 
-                          this.etudiantForm.controls["lastName"].value + 
+        this.emailLink = ("mailto:" + (this.emailSendTo) + "?subject=Retour de "+ 
+                          this.contactForm.controls["firstName"].value + " " + 
+                          this.contactForm.controls["lastName"].value + 
                            " sur l'application fullStack&body=" + 
-                          this.etudiantForm.controls["message"].value);
+                          this.contactForm.controls["message"].value);
         window.location.href = this.emailLink;
-        this.etudiantForm.reset();
+        this.contactForm.reset();
         this.router.navigateByUrl('/home');
     }
     else {

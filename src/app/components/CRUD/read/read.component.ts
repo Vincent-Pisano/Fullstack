@@ -16,7 +16,7 @@ export class ReadComponent implements OnInit {
 
   readEtudiantForm : FormGroup ;
 
-  constructor(private service: ReactiveFormulaireService, private router:Router, private route: ActivatedRoute) { }
+  constructor(private service: ReactiveFormulaireService, private route: ActivatedRoute) { }
 
   ngOnInit(): void 
   {
